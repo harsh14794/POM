@@ -29,7 +29,11 @@ public class LoginPageTest extends TestBase {
 		String title = loginpage.ValidateLoginPageTitle();
 		Assert.assertEquals(title, "Travel with Expedia.ca: Vacation Homes, Hotels, Car Rentals, Flights & More");
 	}
-	
+	@Test
+	public void ValidateExpediaLogo() {
+		boolean flag =loginpage.ValidateLogo();
+		Assert.assertTrue(flag);
+	}
 	
 	
 	@AfterMethod
